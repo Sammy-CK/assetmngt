@@ -10,7 +10,9 @@ import {
   CheckCircle,
   FileText,
   Shield,
-  Activity
+  Activity,
+  CheckCircle2,
+  Workflow
 } from 'lucide-react';
 
 const stats = [
@@ -125,6 +127,58 @@ const quickActions = [
 export default function Dashboard() {
   return (
     <div className="space-y-8">
+      {/* Beautiful Blue Banner */}
+      <div className="bg-gradient-to-r from-blue-800 to-blue-900 rounded-xl shadow-lg p-8">
+        <div className="flex items-center justify-between">
+          {/* Title and Subtitle */}
+          <div className="flex items-center space-x-4">
+            <div className="bg-white/20 p-3 rounded-lg">
+              <Shield className="h-8 w-8 text-white" />
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold text-white">PSSF Asset Management Portal</h1>
+              <p className="text-blue-100 mt-1">Comprehensive ICT Asset Tracking & Workflow Management</p>
+            </div>
+          </div>
+
+          {/* KPI Cards */}
+          <div className="flex space-x-6">
+            {/* System Uptime KPI */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 min-w-[140px]">
+              <div className="flex items-center justify-center mb-2">
+                <CheckCircle2 className="h-6 w-6 text-white" />
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">98.5%</div>
+                <div className="text-sm text-blue-100">System Uptime</div>
+              </div>
+            </div>
+
+            {/* Active Workflows KPI */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 min-w-[140px]">
+              <div className="flex items-center justify-center mb-2">
+                <Workflow className="h-6 w-6 text-white" />
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">15</div>
+                <div className="text-sm text-blue-100">Active Workflows</div>
+              </div>
+            </div>
+
+            {/* Reports Generated KPI */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 min-w-[140px]">
+              <div className="flex items-center justify-center mb-2">
+                <FileText className="h-6 w-6 text-white" />
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">47</div>
+                <div className="text-sm text-blue-100">Reports Generated</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
